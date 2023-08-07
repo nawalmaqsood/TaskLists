@@ -7,10 +7,10 @@
       <v-btn type="submit" color="black">Add Task</v-btn>
     </v-form>
     <router-link to="/task-list">
-      <v-btn block color="black" text>See all tasks</v-btn>
+      <v-btn block color="white" text>See all tasks</v-btn>
     </router-link>
     <router-link to="/task-deleted">
-      <v-btn block color="black" text>Delete a task</v-btn>
+      <v-btn block color="white" text>Delete a task</v-btn>
     </router-link>
     <router-view></router-view>
   </v-container>
