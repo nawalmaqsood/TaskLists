@@ -5,8 +5,8 @@
       <v-list>
         <v-list-item v-for="(task, index) in tasks" :key="index">
           <v-list-item-content>
-            <v-list-item-title>Title: {{ task.title }}</v-list-item-title>
-            <v-list-item-subtitle>Description: {{ task.description }}</v-list-item-subtitle>
+            <v-list-item-title >Title: {{ task.title }}</v-list-item-title>
+            <v-list-item-title>Description: {{ task.description }}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-action>
             <v-btn color="black" @click="deleteTask(index)">Delete</v-btn>
