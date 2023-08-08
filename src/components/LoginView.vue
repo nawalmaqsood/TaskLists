@@ -12,7 +12,7 @@
               <v-text-field label="Username" v-model="username" type="text" variant="outlined" required></v-text-field>
               <v-text-field label="Password" v-model="password" type="password" variant="outlined" required></v-text-field>
               <v-btn block color="black" type="submit">Login</v-btn>
-              <br />
+              <br/>
               <router-link to="/signup">
                 <v-btn block color="black" text>Create an account</v-btn>
               </router-link>
