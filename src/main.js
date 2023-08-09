@@ -12,12 +12,9 @@ const vuetify = createVuetify({
   directives,
 });
 
-// Create the app instance
 const app = createApp(App)
 
-// Use Vuetify
 app.use(vuetify)
-// Mount the app to the #app element
 app.use(store)
 app.use(router)
 app.mount('#app')

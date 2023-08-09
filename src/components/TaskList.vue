@@ -29,13 +29,13 @@
       },
     },
     methods: {
-      ...mapActions(['updateTask']),
+      ...mapActions(['TaskStatus']),
       InProgress(index) {
-        this.updateTask({ index, completed: false });
+        this.TaskStatus({ index, completed: false });
         alert('Task is now in progress.');
       },
       Completed(index) {
-        this.updateTask({ index, completed: true });
+        this.TaskStatus({ index, completed: true });
         alert('Task is now completed.');
       },
     },
