@@ -4,6 +4,7 @@ import SignupView from '../components/SignupView.vue';
 import TaskCreated from '../components/TaskCreated.vue';
 import TaskList from '../components/TaskList.vue';
 import TaskDeleted from '../components/TaskDeleted.vue';
+import TaskUpdated from '../components/TaskUpdated.vue';
 
 const routes = [
   { 
@@ -25,7 +26,12 @@ const routes = [
   {
     path: '/task-deleted',
     component: TaskDeleted
-  }
+  },
+  {
+    path: '/task-updated/:index',
+    name: 'task-updated', 
+    component: TaskUpdated,
+  },
 ];
 
 const router = createRouter({

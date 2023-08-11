@@ -7,6 +7,7 @@
           <v-list-item-content>
             <v-list-item-title >Title: {{ task.title }}</v-list-item-title>
             <v-list-item-title>Description: {{ task.description }}</v-list-item-title>
+            <v-list-item-title>Price: {{task.price}}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-action>
             <v-btn color="black" @click="deleteTask(index)">Delete</v-btn>
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
@@ -28,6 +29,7 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['deleteTask']),
     deleteTask(index) {
       this.tasks.splice(index, 1);
     },

@@ -4,6 +4,7 @@
     <v-form @submit.prevent="addNewTask">
       <v-text-field v-model="newTask.title" label="Task Title"></v-text-field>
       <v-text-field v-model="newTask.description" label="Task Description"></v-text-field>
+      <v-text-field v-model="newTask.price" label="Task price"></v-text-field>
       <v-btn type="submit" color="black">Add Task</v-btn>
     </v-form>
     <router-link to="/task-list">
@@ -26,6 +27,7 @@ export default {
         title: '',
         description: '',
         completed: false,
+        price:null,
       },
     };
   },
@@ -36,7 +38,8 @@ export default {
       this.addTask({ ...this.newTask });
       this.newTask.title = '';
       this.newTask.description = '';
-    },
+      this.newTask.price='';
+},
   },
 };
 </script>
