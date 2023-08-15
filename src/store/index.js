@@ -3,6 +3,7 @@ import { createStore } from 'vuex';
 export default createStore({
   state: {
     tasks: [],
+    cart: []
   },
   mutations: {
     addTask(state, task) {
@@ -22,6 +23,13 @@ export default createStore({
         state.tasks[taskIndex].price=updatedTask.price;
       }
     },
+    addToCart(state, task) {
+      state.cart.push(task);
+      console.log(state.cart);
+    },
+    removeFromCart(state, index) {
+      state.cart.splice(index, 1);
+    },
   },
   actions: {
     addTask({ commit }, task) {
@@ -36,8 +44,16 @@ export default createStore({
     updateTask({ commit }, updatedTask) {
       commit('updateTask', updatedTask);
     },
+    addTaskToCart({ commit }, task) {
+        commit('addToCart', task);
+    },
+    removeTaskFromCart({ commit }, index) {
+      commit('removeFromCart', index);
+    },
   },
   getters: {
     getTasks: state => state.tasks,
+    getCart: state => state.cart,
+
   },
 });

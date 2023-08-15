@@ -5,6 +5,7 @@ import TaskCreated from '../components/TaskCreated.vue';
 import TaskList from '../components/TaskList.vue';
 import TaskDeleted from '../components/TaskDeleted.vue';
 import TaskUpdated from '../components/TaskUpdated.vue';
+import CartList from '../components/CartList.vue'; 
 
 const routes = [
   { 
@@ -14,7 +15,7 @@ const routes = [
   { 
     path: '/signup', 
     component: SignupView 
-  },
+  },  
   { 
     path: '/task-created',
     component: TaskCreated,
@@ -31,6 +32,10 @@ const routes = [
     path: '/task-updated/:index',
     name: 'task-updated', 
     component: TaskUpdated,
+  },
+  {
+    path: '/cart-list',
+    component: CartList,
   },
 ];
 

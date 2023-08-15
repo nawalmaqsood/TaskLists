@@ -26,7 +26,6 @@ export default {
       newTask: {
         title: '',
         description: '',
-        completed: false,
         price:null,
       },
     };
@@ -34,7 +33,7 @@ export default {
   methods: {
     ...mapActions(['addTask']),
     addNewTask() {
-      if (this.newTask.title.trim() === '') return;
+      //if (this.newTask.title.trim() === '') return;
       this.addTask({ ...this.newTask });
       this.newTask.title = '';
       this.newTask.description = '';

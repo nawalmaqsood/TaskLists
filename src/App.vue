@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <LoginView/>
     <HeaderView />
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
